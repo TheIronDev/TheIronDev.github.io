@@ -1,4 +1,4 @@
 plugins:
   ghpages:
-    deployRemote: 'target'
+    deployRemote: 'origin'
     deployBranch: 'master'

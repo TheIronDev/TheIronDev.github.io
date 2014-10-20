@@ -1,7 +1,7 @@
 
 module.exports = {
 	ghpages: {
-		deployRemote: 'target'
-	},
-	deployBranch: 'master'
+		deployRemote: 'target',
+		deployBranch: 'master'
+	}
 };

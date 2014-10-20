@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= @document.title %> | The Iron Developer's Home</title>
+    <%- @getBlock("meta").toHTML() %>
+    <%- @getBlock("styles").add(["/styles/style.css"]).add(["/styles/highlightjs-github.css"]).toHTML() %>
+</head>
+<body>
+	<div class="container">
+    	<h1><%= @document.title %></h1>
+    	<%- @content %>
+    </div>
+    <%- @getBlock("scripts").toHTML() %>
+</body>
+</html>

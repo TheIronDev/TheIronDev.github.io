@@ -8,6 +8,7 @@
 <body>
 	<div class="container">
     	<h1><%= @document.title %></h1>
+    	<img class="avatar" src="https://en.gravatar.com/userimage/47853580/0a9918efdfbbb74daf287d9f6bdc4e00.jpg?size=100" />
     	<%- @content %>
     </div>
     <%- @getBlock("scripts").toHTML() %>

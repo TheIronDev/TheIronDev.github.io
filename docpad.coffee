@@ -4,5 +4,6 @@ docpadConfig = {
 			deployRemote: 'origin'
 			deployBranch: 'master'
 
-	outPath: '.'
 }
+
+module.exports = docpadConfig

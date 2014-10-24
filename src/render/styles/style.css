@@ -1,4 +1,5 @@
 h1 {
+    margin:0;
     text-align: center;
 }
 
@@ -9,6 +10,38 @@ h1 {
     width: 100%;
 }
 
+.circles {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    top: 6em;
+    width: 3em;
+}
+
+.circle {
+    position: absolute;
+    left: 0;
+    top: -6em;
+    transition: all .5s ease;
+}
+
+.circle-image {
+    max-width: 3em;
+    border-radius: 3em;
+}
+
+.circle-more-info {
+    display: none;
+}
+
+.avatar-wrapper {
+    padding: 3em;
+    text-align: center;
+}
+
 .avatar {
     border-radius: 5em;
+    margin: 0 auto;
+    width: 9em;
 }

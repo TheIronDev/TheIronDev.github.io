@@ -6,8 +6,8 @@ docpadConfig = {
 		}
 	},
 	collections: {
-		projects: function() {
-			return this.getCollection("documents").findAll({isProject:true});
+		circles: function() {
+			return this.getCollection("documents").findAll({isCirclePartial:true});
 		}
 	}
 }

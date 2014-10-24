@@ -9,18 +9,19 @@
 <div class="container">
 	<h1><%= @document.title %></h1>
 
-	<div class="">
-		<img class="avatar" src="https://en.gravatar.com/userimage/47853580/0a9918efdfbbb74daf287d9f6bdc4e00.jpg?size=100" />
-	</div>
-
-	<ul class="projects">
-		<% for page in @getCollection("projects").toJSON(): %>
-		<li class="<%= if page.id is @document.id then 'active' else 'inactive' %>">
-			<img src="<%= page.image %>" />
-			<%= page.title %>: <%= page.description %> : <a href="<%= page.url %>">Site Url</a>
+	<ul class="circles">
+		<% for page in @getCollection("circles").toJSON(): %>
+		<li class="circle">
+			<img class="circle-image" src="<%= page.image %>" />
+			<div class="circle-more-info">
+				<%= page.title %>: <%= page.description %> : <a href="<%= page.url %>">Site Url</a>
+			</div>
 		</li>
 		<% end %>
 	</ul>
+	<div class="avatar-wrapper">
+		<img class="avatar" src="https://en.gravatar.com/userimage/47853580/0a9918efdfbbb74daf287d9f6bdc4e00.jpg?size=150" />
+	</div>
 
 	<div class="content">
 		<%- @content %>

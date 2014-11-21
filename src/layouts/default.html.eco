@@ -4,23 +4,26 @@
 	<title><%= @document.title %> | The Iron Developer's Home</title>
 	<%- @getBlock("meta").toHTML() %>
 	<%- @getBlock("styles").add(["/styles/style.css"]).add(["/styles/highlightjs-github.css"]).toHTML() %>
+	<script data-main="scripts/config" src="scripts/lib/require.js"></script>
 </head>
 <body>
 <div class="container">
 	<h1><%= @document.title %></h1>
-
-	<ul class="circles">
-		<% for page in @getCollection("circles").toJSON(): %>
-		<li class="circle">
-			<img class="circle-image" src="<%= page.image %>" />
-			<div class="circle-more-info">
-				<%= page.title %>: <%= page.description %> : <a href="<%= page.url %>">Site Url</a>
-			</div>
-		</li>
-		<% end %>
-	</ul>
-	<div class="avatar-wrapper">
-		<img class="avatar" src="https://en.gravatar.com/userimage/47853580/0a9918efdfbbb74daf287d9f6bdc4e00.jpg?size=150" />
+	<div class="avatar-project-container">
+		<ul class="circles">
+			<% for page in @getCollection("circles").toJSON(): %>
+			<li class="circle">
+				<a href="<%= page.url %>"><img class="circle-image" src="<%= page.image %>" /></a>
+				<div class="circle-more-info">
+					<h3><%= page.title %></h3>
+				</div>
+			</li>
+			<% end %>
+		</ul>
+		<div class="avatar-wrapper">
+			<img class="avatar" src="https://en.gravatar.com/userimage/47853580/0a9918efdfbbb74daf287d9f6bdc4e00.jpg?size=150" />
+			<div class="focus-more-info">&nbsp;</div>
+		</div>
 	</div>
 
 	<div class="content">

@@ -1,13 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Steelworks;
+    src: url("/fonts/SteelworksBook.otf");
+    font-weight:400;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    background: #000000; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #000000 0%, #6393c1 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#000000), color-stop(100%,#6393c1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  #000000 0%,#6393c1 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  #000000 0%,#6393c1 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #000000 0%,#6393c1 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #000000 0%,#6393c1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#6393c1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 h1 {
-    margin:0;
+    color: #007AB8;
+    text-shadow: 1px 1px 1px #333;
+    margin:0.5em 0;
     text-align: center;
+    font-family: Steelworks;
 }
 
 .container {
-    border: 1px solid #ccc;
     max-width: 960px;
     margin: 0 auto;
     width: 100%;
+}
+
+.avatar-project-container {
+    padding: 0.5em 0;
 }
 
 .circles {
@@ -21,8 +54,10 @@ h1 {
 
 .circle {
     position: absolute;
+    z-index: 1;
     left: 0;
-    top: -6em;
+    top: 0;
+    transform: translateY(-7em);
     transition: all .5s ease;
 }
 
@@ -36,7 +71,12 @@ h1 {
 }
 
 .avatar-wrapper {
-    padding: 3em;
+    position: relative;
+    overflow: hidden;
+    margin: 3em auto;
+    width: 9em;
+    height: 9em;
+    border-radius: 5em;
     text-align: center;
 }
 
@@ -44,4 +84,35 @@ h1 {
     border-radius: 5em;
     margin: 0 auto;
     width: 9em;
+}
+
+.avatar-project-container.moreInfo .focus-more-info {
+    bottom: 0;
+}
+
+.focus-more-info {
+    display: flex;
+    align-items: center;
+
+    height: 9em;
+    width: 9em;
+    padding: 1em;
+    margin: 0 auto;
+
+    position: absolute;
+    bottom: -9em;
+    left: 0;
+    right: 0;
+
+    background: rgba(255,255,255,.8);
+    border-radius: 5em;
+    border: 1px solid #33a;
+
+    overflow: hidden;
+    word-wrap: break-word;
+    transition: all .5s ease;
+}
+
+.focus-more-info h3 {
+    width: 100%;
 }

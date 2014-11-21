@@ -2,3 +2,4 @@ node_modules/
 package.json
 .idea/
 out/
+.DS_Store

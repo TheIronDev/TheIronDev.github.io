@@ -1,0 +1,68 @@
+*{box-sizing:border-box;-moz-box-sizing: border-box;}
+body{font-family: 'Oxygen', sans-serif;background: #ddd;}
+html,body{margin: 0;}
+img{max-width: 100%;}
+label{font-weight: bold;display: block;text-align: center;}
+.container{max-width: 1020px;width: 100%;}
+.warning{color:#f00;text-shadow:1px 1px 1px #fff;}
+
+#portfolio{float:left;padding: 0 1em;width: 67%;}
+
+#intro{float: right;padding: 5px;width: 32%;}
+#intro section{border-bottom: 1px solid #999;box-shadow: 0 1px 0 #fff;padding: 5px 0;}
+
+/* Intro Section */
+.profile-image{float: left;padding: 0 1em 0 0;}
+.legend-list,
+.download-list{list-style: none;padding: 0;overflow: hidden;}
+.legend-list img,
+.download-list img{vertical-align: middle;padding: 0 0.5em;}
+
+.download-list li{float: left;}
+.download-list a{display: block;padding: 2px;-webkit-transition:all .5s ease;transition:all .5s ease;}
+.download-list a:hover{background: rgba(0,0,0,.5);color: #fff;}
+
+
+/* Timeline related Styling */
+.timeline{border-left: 3px solid #000;padding: 0;font-size: 1.5em;line-height: 1.5em;margin-left: 2em;}
+.timeline:after{clear: both;display: block;content: ' '}
+.timeline li{margin: 1em 0 1em 13px;float: left;clear: both;}
+.timeline .title{text-shadow: 1px 1px 1px #fff;}
+.timeline .title sub{font-size: 0.5em;color: #fff;text-shadow: 1px 1px 1px #000;}
+.timeline .timeline-section{list-style: none;margin-left: -30px;padding:4px;background: rgba(255,255,255,0.8);}
+.timeline .timeline-item{cursor: pointer;list-style-image: url(/images/item.png);position: relative;}
+
+/* Prefixes for each timeline Item */
+.timeline-item:before {content: ' ';float: left;height: 36px;left: -70px;position: absolute;width: 36px;}
+.timeline-item.prefix-homeaway:before{background: url(/images/item-prefix-away.png) no-repeat;}
+.timeline-item.prefix-jackrabbit:before{background: url(/images/item-prefix-jackrabbit.png) no-repeat;}
+.timeline-item.prefix-razorfish:before{background: url(/images/item-prefix-razorfish.png) no-repeat;}
+
+/* More Info Section*/
+.timeline-item .moreInfo{background: rgba(0,0,0,0.8);color:#efefef;cursor:default;font-size: 0.8em;height: 0;overflow: hidden;padding:0;position: absolute;width: 600px;-webkit-transition:all .5s ease;transition:all .5s ease;}
+
+.timeline-item:hover .moreInfo,
+.timeline-item .moreInfo.expanded,
+.timeline.expanded .timeline-item .moreInfo{padding:1em;height: auto;overflow: visible;left:50px;top:1.6em;z-index: 1;}
+.timeline-item .moreInfo.expanded,
+.timeline.expanded .timeline-item .moreInfo{position: static;}
+
+.timeline-item .moreInfo a{color: #36B2EC;}
+.timeline-item .moreInfo .thumbnail{float: right;max-width: 30%;margin-left: 5px;}
+.timeline-item .moreInfo:after{clear: both;content: ' ';display: block;;}
+
+@media (max-width: 1020px) {
+	.container{max-width:960px;}
+}
+@media (max-width: 960px) {
+	#intro,
+	#portfolio{float: none;width: 100%;}
+	.legend-list li{float: left;}
+	.timeline.expanded .timeline-item .moreInfo{width: 100%;}
+}
+
+/* "Mobile" users can't hover, so we need to eliminate hovering.*/
+@media (max-width: 600px) {
+	label{display: none;}
+	.timeline .timeline-item .moreInfo{padding:1em;height: auto;overflow: visible;position:static;width: inherit;}
+}

@@ -17,7 +17,7 @@ define(['backbone', 'models/projectBubbles'],
 				this.model = new ProjectBubblesModel();
 
 				this.model.set('size', $circles.length);
-				this.transformCircles($circles.slice(1));
+				this.transformCircles($circles);
 			},
 			focusBubble: function(event) {
 				var $bubble = $(event.currentTarget),
@@ -35,11 +35,12 @@ define(['backbone', 'models/projectBubbles'],
 
 				if (projects && projects.length) {
 
-					this.model.bumpCurrent();
 					projects.each(function() {
 						var $project = $(this);
 						$project.css('transform', model.get('currentTransformClass'));
+						$project.find('.circle-anchor').css('transform', model.get('imageTransformClass'));
 					});
+					this.model.bumpCurrent();
 
 					setTimeout(function(){
 						self.transformCircles(projects.slice(1));

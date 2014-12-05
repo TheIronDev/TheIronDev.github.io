@@ -37,11 +37,36 @@ h1 {
     max-width: 960px;
     margin: 0 auto;
     width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.container-inner.vertical-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header-containers {
+    max-width: 30em;
+    margin: 2em auto;
+}
+
+.header-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
 }
 
 .avatar-project-container {
     padding: 0.5em 0;
+    max-width: 66%;
 }
+
+.technologies-container {
+    max-width: 33%;
+}
+
+/* Project Bubbles */
 
 .circles {
     list-style: none;
@@ -61,9 +86,21 @@ h1 {
     transition: all .5s ease;
 }
 
+.circle-anchor {
+    display: block;
+    width: 3em;
+    height: 3em;
+    transition: all .5s ease;
+}
+
 .circle-image {
     max-width: 3em;
     border-radius: 3em;
+    box-shadow: 0 0 5px #333;
+}
+
+.circle-anchor:hover {
+    transform: scale(1.5);
 }
 
 .circle-more-info {
@@ -78,6 +115,7 @@ h1 {
     height: 9em;
     border-radius: 5em;
     text-align: center;
+    box-shadow: 0 0 5px #333;
 }
 
 .avatar {
@@ -115,4 +153,10 @@ h1 {
 
 .focus-more-info h3 {
     width: 100%;
+}
+
+@media (max-width: 30em) {
+    .header-containers .header-container {
+        max-width: 100%;
+    }
 }

@@ -9,7 +9,10 @@ docpadConfig = {
 		circles: function() {
 			return this.getCollection("documents").findAll({isCirclePartial:true});
 		}
+	},
+	watchOptions: {
+		catchupDelay: 0
 	}
-}
+};
 
-module.exports = docpadConfig
+module.exports = docpadConfig;

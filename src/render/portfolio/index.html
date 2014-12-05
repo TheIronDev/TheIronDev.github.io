@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tyler Stark's Private Portfolio</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="intial-scale=1.0, width=device-width" />
+	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/styles/portfolio.css" />
+	<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<section id="intro">
+		<section>
+			<header><h3>Hi there!</h3></header>
+			<img class="profile-image" src="http://www.gravatar.com/avatar/ebc665be7acc34b9f4aaa990f5607401.png?s=90">
+			<p>Welcome to my personal portfolio.</p><br/>
+			<label>Expand Timeline: <input type="checkbox" class="toggleTimeline" /></label>
+		</section>
+		<section>
+			<header><h3>Legend</h3></header>
+			<ul class="legend-list">
+				<li><img src="/images/item-prefix-away.png" /> HomeAway</li>
+				<li><img src="/images/item-prefix-jackrabbit.png" /> JackRabbit Mobile</li>
+				<li><img src="/images/item-prefix-razorfish.png" /> Razorfish</li>
+			</ul>
+		</section>
+	</section>
+	<section  id="portfolio">
+		<ul class="timeline">
+			<li class="timeline-section">2013</li>
+			<li class="timeline-item prefix-homeaway">
+				<div class="title">HomeAway Luxury <sub>September 2013</sub></div>
+				<div class="moreInfo">After I ported our CSS to Sass, I reskinned HomeAway.com to make a luxury version at <a href="http://luxury.homeaway.com/">Luxury.HomeAway.com</a><img src="/images/portfolio/luxury.jpg" /></div>
+			</li>
+			<li class="timeline-item prefix-homeaway">
+				<div class="title">JSHint Git Precommit Hook <sub>April 2013</sub></div>
+				<div class="moreInfo">In an effort to improve quality, I made a git precommit hook that runs JSHint to verify broken javascript does not make it to production.</div>
+			</li>
+			<li class="timeline-item prefix-homeaway">
+				<div class="title">HomeAway Search Filters <sub>March 2013</sub></div>
+				<div class="moreInfo">I developed the Search Filter functionality found on <a href="http://www.homeaway.com/search">the search pages of HomeAway.com</a> using Backbone.js. <img src="/images/portfolio/searchFilters.jpg" /></div>
+			</li>
+
+			<li class="timeline-section">2012</li>
+			<li class="timeline-item prefix-homeaway">
+				<div class="title">Jasmine Unit Testing <sub>December 2012</sub></div>
+				<div class="moreInfo">In an effort to improve javascript quality, I introduced Jasmine Unit Testing to HomeAway's codebase. Every Friday, I would run a Grunt task to display if there were any Jasmine test failures, as well as the number of unit tests written.</div>
+			</li>
+			<li class="timeline-item prefix-homeaway">
+				<div class="title">Backbone in HomeAway <sub>December 2012</sub></div>
+				<div class="moreInfo">I came up with a strategy to integrate Backbone into the HomeAway.com codebase. The previous JavaScript code was not modularized, so I slowly moved chunks of code to separate Backbone models or views, followed up by creating presentations every week to ensure my team was comfortable with the new patterns.</div>
+			</li>
+			<li class="timeline-item">
+				<div class="title">Pokemon Checklist Webapp <sub>November 2012</sub></div>
+				<div class="moreInfo"><img src="/images/portfolio/pokechecklist.jpg" class="thumbnail" /> I created this webapp with the intention of exploring Backbone.js and later to explore Require.js.</div>
+			</li>
+			<li class="timeline-item prefix-homeaway">
+				<div class="title">The Dillernator <sub>August 2012</sub></div>
+				<div class="moreInfo">My team lacked a way to quickly visualize our kanban board, defect count, and build failures. So, I used Rally's Rails plugin to make a dashboard.<br/><a href="http://www.rallydev.com/community/developer/rally-customer-home-away-creates-touchscreen-kanban-board">Read RallyDev's article about it here</a>.</div>
+			</li>
+
+			<li class="timeline-section">2011</li>
+
+			<li class="timeline-item prefix-homeaway">
+				<div class="title">Favorites on HomeAway.com <sub>July 2011</sub></div>
+				<div class="moreInfo">My first large project with HomeAway was to develop the "Favorites" functionality. This involved exposing an endpoint for favorite calls, writing jQuery plugins to handle 'favoriting' and 'saving notes', and building the UI for <a href="http://www.homeaway.com/favorites">the favorites page</a>.<img src="/images/portfolio/favorites.jpg" /></div>
+			</li>
+
+			<li class="timeline-section">2010</li>
+			<li class="timeline-item prefix-razorfish">
+				<div class="title">Razorfish work <sub>2008-2010</sub></div>
+				<div class="moreInfo expanded">Unfortunately, I can't publically share my past work with Razorfish (sorry). If you contact me directly, I can expand upon past work experiences.</div>
+			</li>
+		</ul>
+	</section>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#intro').on('click', '.toggleTimeline', function(){
+			$('.timeline').toggleClass('expanded');
+		});
+	});
+
+	ga('create', 'UA-44390953-1', 'theirondeveloper.com');
+	ga('send', 'pageview');
+</script>
+</body>
+</html>

@@ -25,14 +25,20 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#6393c1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+/** Header **/
+
 h1 {
-    color: #007AB8;
+    color: #ffe033;
     text-shadow: 1px 1px 1px #333;
     margin:0.5em 0;
     text-align: center;
-    font-family: Steelworks;
+    font-family: 'Steelworks', 'Helvetic Neue', 'Helvetica', 'Arial';
+}
+h1 a {
+    color: #007AB8;
 }
 
+/** Container **/
 .container {
     max-width: 960px;
     margin: 0 auto;
@@ -44,6 +50,33 @@ h1 {
 .container-inner.vertical-center {
     display: table-cell;
     vertical-align: middle;
+}
+
+.container-inner.notes .content {
+    background: rgba(255,255,255,.8);
+    padding: 1em;
+}
+
+/** Site Navigation **/
+.site-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.site-nav li {
+    margin-bottom: 0.5em;
+}
+.site-nav a {
+    background: rgba(0,0,0,0.3);
+    color: #efefef;
+    display: block;
+    font-family: 'Steelworks', 'Helvetic Neue', 'Helvetica', 'Arial';
+    padding: 8px 2px;
+    text-align: center;
+    text-decoration: none;
+}
+.site-nav a:hover {
+    background: rgba(0,0,0,.6);
 }
 
 .header-containers {

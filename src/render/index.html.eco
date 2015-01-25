@@ -1,0 +1,32 @@
+---
+title: ""
+layout: "default"
+isPage: true
+wrapperClass: "vertical-center"
+---
+
+<header class="header-containers">
+	<div class="avatar-project-container header-container">
+		<ul class="circles">
+			<% for page in @getCollection("circles").toJSON(): %>
+			<li class="circle">
+				<a class="circle-anchor" href="<%= page.href %>"><img class="circle-image" src="<%= page.image %>" /></a>
+				<div class="circle-more-info">
+					<h3><%= page.title %></h3>
+				</div>
+			</li>
+			<% end %>
+		</ul>
+		<div class="avatar-wrapper">
+			<img class="avatar" src="https://en.gravatar.com/userimage/47853580/0a9918efdfbbb74daf287d9f6bdc4e00.jpg?size=150" />
+			<div class="focus-more-info">&nbsp;</div>
+		</div>
+	</div>
+	<div class="technologies-container header-container">
+		<ul class="site-nav">
+			<li><a href="/notes/backbone">Backbone</a></li>
+			<li><a href="/notes/css">CSS</a></li>
+			<li><a href="/notes/git/">Git</a> </li>
+		</ul>
+	</div>
+</header>

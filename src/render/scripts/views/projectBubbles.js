@@ -21,10 +21,15 @@ define(['backbone', 'models/projectBubbles'],
 			},
 			focusBubble: function(event) {
 				var $bubble = $(event.currentTarget),
-					moreInfoHtml = $bubble.find('.circle-more-info').html();
+					moreInfoHtml = $bubble.find('.circle-more-info').html(),
+					self = this,
+					showMoreInfo = function(){
+						self.$('.focus-more-info').html(moreInfoHtml);
+						self.$el.addClass('moreInfo');
+					};
 
-				this.$('.focus-more-info').html(moreInfoHtml);
-				this.$el.addClass('moreInfo');
+				// The delay helps address odd behavior where the user quickly changes focus on multiple bubbles
+				setTimeout(showMoreInfo, 250);
 			},
 			unFocusBubble: function(event) {
 				this.$el.removeClass('moreInfo');

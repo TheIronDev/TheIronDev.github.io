@@ -8,7 +8,9 @@ define(['backbone', 'models/projectBubbles'],
 			el: '.avatar-project-container',
 			events: {
 				'mouseover .circle': 'focusBubble',
-				'mouseout .circle': 'unFocusBubble'
+				'mouseout .circle': 'unFocusBubble',
+				'focus .circle': 'focusBubble',
+				'focusout .circle': 'unFocusBubble'
 			},
 			initialize: function() {
 
@@ -29,9 +31,10 @@ define(['backbone', 'models/projectBubbles'],
 					};
 
 				// The delay helps address odd behavior where the user quickly changes focus on multiple bubbles
-				setTimeout(showMoreInfo, 250);
+				this.timeout = setTimeout(showMoreInfo, 250);
 			},
 			unFocusBubble: function(event) {
+				clearTimeout(this.timeout);
 				this.$el.removeClass('moreInfo');
 			},
 			transformCircles: function(projects) {

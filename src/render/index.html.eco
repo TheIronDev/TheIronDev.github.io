@@ -24,6 +24,7 @@ wrapperClass: "vertical-center"
 	</div>
 	<div class="technologies-container header-container">
 		<ul class="site-nav">
+			<li><a href="/notes/javascript">JavaScript</a></li>
 			<li><a href="/notes/backbone">Backbone</a></li>
 			<li><a href="/notes/css">CSS</a></li>
 			<li><a href="/notes/git/">Git</a> </li>

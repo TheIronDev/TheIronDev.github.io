@@ -5,6 +5,9 @@ isPage: true
 wrapperClass: "notes"
 ---
 
+## Helpful Resources
+[ProGit, by Scott Chacon](http://www.amazon.com/Pro-Git-Scott-Chacon/dp/1430218339)
+
 ## Userful Git commands
 
 ### Commiting

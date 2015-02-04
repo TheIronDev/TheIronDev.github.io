@@ -7,8 +7,9 @@
 	<meta name="author" content="Tyler Stark">
 	<meta name="viewport" content="intial-scale=1.0, width=device-width, user-scalable=no" />
 	<%- @getBlock("meta").toHTML() %>
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 	<%- @getBlock("styles").add(["/styles/style.css"]).add(["/styles/highlightjs-github.css"]).toHTML() %>
-	<script data-main="/scripts/config" src="/scripts/lib/require.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
 <div class="container">
@@ -23,5 +24,6 @@
 	</div>
 </div>
 <%- @getBlock("scripts").toHTML() %>
+<script data-main="/scripts/config" src="/scripts/lib/require.js"></script>
 </body>
 </html>

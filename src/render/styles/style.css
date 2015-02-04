@@ -14,6 +14,9 @@ html {
 body {
     height: 100%;
     margin: 0;
+
+    font-family: 'Titillium Web', sans-serif;
+
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
     background: #000000; /* Old browsers */

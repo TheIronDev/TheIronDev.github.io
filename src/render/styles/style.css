@@ -13,6 +13,7 @@ html {
 }
 body {
     height: 100%;
+    margin: 0;
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
     background: #000000; /* Old browsers */
@@ -116,8 +117,9 @@ h1 a {
     z-index: 1;
     left: 0;
     top: 0;
-    transform: translateY(-7em);
-    transition: all .5s ease;
+    transform: rotate(0deg) translateY(-7em);
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .circle-anchor {
@@ -192,5 +194,8 @@ h1 a {
 @media (max-width: 30em) {
     .header-containers .header-container {
         max-width: 100%;
+    }
+    .avatar-project-container {
+        padding: 0.5em 0 2em;
     }
 }

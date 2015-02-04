@@ -46,13 +46,12 @@ define(['backbone', 'models/projectBubbles'],
 					projects.each(function() {
 						var $project = $(this);
 						$project.css('transform', model.get('currentTransformClass'));
+						$project.css('opacity', '1');
 						$project.find('.circle-anchor').css('transform', model.get('imageTransformClass'));
 					});
 					this.model.bumpCurrent();
 
-					setTimeout(function(){
-						self.transformCircles(projects.slice(1));
-					}, 150);
+					this.transformCircles(projects.slice(1));
 				}
 			}
 		});

@@ -2,6 +2,10 @@
 <html>
 <head>
 	<title><%= @document.title %> | The Iron Developer's Home</title>
+	<meta name="keywords" content="Tyler Stark, The Iron Developer" />
+	<meta charset="UTF-8" />
+	<meta name="author" content="Tyler Stark">
+	<meta name="viewport" content="intial-scale=1.0, width=device-width, user-scalable=no" />
 	<%- @getBlock("meta").toHTML() %>
 	<%- @getBlock("styles").add(["/styles/style.css"]).add(["/styles/highlightjs-github.css"]).toHTML() %>
 	<script data-main="/scripts/config" src="/scripts/lib/require.js"></script>

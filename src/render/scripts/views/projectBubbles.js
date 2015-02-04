@@ -47,7 +47,7 @@ define(['backbone', 'models/projectBubbles'],
 						var $project = $(this);
 						$project.css('transform', model.get('currentTransformClass'));
 						$project.css('opacity', '1');
-						$project.find('.circle-anchor').css('transform', model.get('imageTransformClass'));
+						$project.find('.circle-image').css('transform', model.get('imageTransformClass'));
 					});
 					this.model.bumpCurrent();
 

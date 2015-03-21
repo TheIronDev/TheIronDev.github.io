@@ -31,3 +31,6 @@ wrapperClass: "vertical-center"
 		</ul>
 	</div>
 </header>
+<div class="slides">
+	<iframe src="https://docs.google.com/presentation/d/1cj_Ucz8-M93BGqbS4ipsfb-wT1FfIVpqQ42wUDR22QY/embed?start=false&loop=false&delayms=10000" frameborder="0" width="300" height="180" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>

@@ -39,11 +39,11 @@ label{font-weight: bold;display: block;text-align: center;}
 .timeline-item.prefix-razorfish:before{background: url(/images/item-prefix-razorfish.png) no-repeat;}
 
 /* More Info Section*/
-.timeline-item .moreInfo{background: rgba(0,0,0,0.8);color:#efefef;cursor:default;font-size: 0.8em;height: 0;overflow: hidden;padding:0;position: absolute;width: 600px;-webkit-transition:all .5s ease;transition:all .5s ease;}
+.timeline-item .moreInfo{padding: 0 1em;background: rgba(0,0,0,0.8);color:#efefef;cursor:default;font-size: 0.8em;height: 0;overflow: hidden;position: absolute;width: 600px;-webkit-transition:all .5s ease;transition:all .5s ease;z-index: 1;left:50px;top:1.6em;}
 
 .timeline-item:hover .moreInfo,
 .timeline-item .moreInfo.expanded,
-.timeline.expanded .timeline-item .moreInfo{padding:1em;height: auto;overflow: visible;left:50px;top:1.6em;z-index: 1;}
+.timeline.expanded .timeline-item .moreInfo{padding: 1em;height: auto;overflow: visible;}
 .timeline-item .moreInfo.expanded,
 .timeline.expanded .timeline-item .moreInfo{position: static;}
 
@@ -58,7 +58,7 @@ label{font-weight: bold;display: block;text-align: center;}
 	#intro,
 	#portfolio{float: none;width: 100%;}
 	.legend-list li{float: left;}
-	.timeline.expanded .timeline-item .moreInfo{width: 100%;}
+	.timeline.expanded .timeline-item .moreInfo{width: 100%;left:0;top:0;}
 }
 
 /* "Mobile" users can't hover, so we need to eliminate hovering.*/

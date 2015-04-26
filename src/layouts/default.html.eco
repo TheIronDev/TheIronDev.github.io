@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><%= @document.title %> | The Iron Developer's Home</title>
+	<title>
+		<% if @document.title : %>
+			<%= @document.title %>
+		<% else: %>
+			The Iron Developer
+		<% end %>
+	</title>
 	<meta name="keywords" content="Tyler Stark, The Iron Developer" />
 	<meta charset="UTF-8" />
 	<meta name="author" content="Tyler Stark">
@@ -15,7 +21,10 @@
 <div class="container">
 	<div class="container-inner <%= @document.wrapperClass %>">
 		<h1>
-			<a href="/">TheIronDeveloper</a><% if @document.title : %>: <%= @document.title %><% end %>
+			<% if !@document.hideName : %>
+				<a href="/">TheIronDeveloper</a><% if @document.title : %>: <% end %>
+			<% end %>
+			<% if @document.title : %><%= @document.title %><% end %>
 		</h1>
 
 		<div class="content">

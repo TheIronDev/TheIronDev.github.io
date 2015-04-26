@@ -1,0 +1,77 @@
+---
+title: "Send Money Polymer"
+layout: "default"
+isPage: true
+hideName: true
+wrapperClass: "vertical-center"
+---
+
+<script src="http://localhost:8000/myaccount/transfer/js/lib/polymer/webcomponents.min.js"></script>
+<link rel="import" href="http://localhost:8000/myaccount/transfer/html/webcomponents/send-money.html" />
+
+<style>
+	.sendmoney-wrappers {
+		background: rgba(255,255,255,0.3);
+	}
+	send-money {
+		display:inline-block;
+		vertical-align: top;
+		margin: 1em;
+		max-width: 600px;
+	}
+	send-money.example1 {
+		background: #1e5799; /* Old browsers */
+		background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+	}
+	send-money.example1 .subHeader {
+		color: #fff;
+	}
+	send-money.example2 {background: url(http://1.bp.blogspot.com/-Hp476gnqAEc/VA8XMVes__I/AAAAAAAAEJU/zia_IRTeDYA/s1600/Fushimi_Inari_Kyoto.jpg) no-repeat center top;}
+	send-money.example2 /deep/ h1 {color: #efefef;text-shadow: 0 0 2px #666;}
+	send-money.example2 .headerCopy {text-align: center;background: rgba(255,255,255,0.75);padding: 0.5em;}
+</style>
+
+
+<section class="sendmoney-wrappers">
+	<send-money class="example1">
+		<p class="headerCopy">My Custom Content</p>
+	</send-money>
+
+
+	<send-money
+			class="example2"
+			recipient="TheIronDeveloper@gmail.com"
+			displayName="Tyler Stark"
+			contactImage="https://en.gravatar.com/userimage/47853580/0a9918efdfbbb74daf287d9f6bdc4e00.jpg?size=150">
+
+		<p class="headerCopy">The Stark Foundation requests your donations</p>
+		<p class="successCopy">The Stark Foundation thanks you!</p>
+	</send-money>
+
+	<send-money
+			recipient="stephenw@bluelinked.com"
+			displayName="Pisces Man"
+			contactImage="https://pics.paypal.com/00/s/NDAwWDI2Ng==/z/kYUAAOSwd4tT0K8Y/$_1.JPG">
+	</send-money>
+
+
+	<send-money
+			recipient="stuartmark@gmail.com"
+			displayName="Stuart Mark"
+			contactImage="https://pics.paypal.com/00/s/MTAwMFg3NTA=/z/5kUAAOSwaNBUbqmg/$_3.JPG">
+	</send-money>
+
+	<send-money recipient="brian.Crescimanno@gmail.com" displayName="Brian Crescimanno" contactImage="https://pics.paypal.com/00/s/MjAwWDIwMA==/z/~DkAAOxy69JTEkhn/$_35.JPG"></send-money>
+	<send-money recipient="DavidFefferman@gmail.com" displayName="David Fefferman" contactImage="https://pics.paypal.com/00/s/NDAwWDQwMA==/z/4hYAAOSwxYxUsZl8/$_1.JPG"></send-money>
+	<send-money recipient="jamund@gmail.com" displayName="Jamund Ferguson" contactImage="https://pics.paypal.com/00/s/MjQ4WDI0OA==/z/xFEAAMXQyY1TVYU2/$_1.JPG"></send-money>
+	<send-money recipient="mbell410@gmail.com" displayName="The Mike" contactImage="https://pics.paypal.com/00/s/NDAwWDQwMA==/z/HYgAAOSwD0lUhmjp/$_1.JPG"></send-money>
+	<send-money recipient="novalina@gmail.com" displayName="Novalina Nursalim" contactImage="https://pics.paypal.com/00/s/NzIwWDEwODA=/z/VpUAAOSwkNZUiP8H/$_3.JPG"></send-money>
+	<send-money recipient="tosindhub@gmail.com" displayName="Sindhu Balakrishnan" contactImage="https://pics.paypal.com/00/s/MjAwWDIwMA==/z/0OEAAOSwFTRTq18Z/$_1.JPG"></send-money>
+	<send-money recipient="vsmaniar@gmail.com" displayName="Vikrant Maniar" contactImage="https://pics.paypal.com/00/s/NzIwWDcyMA==/z/8PMAAOSwr81UOW73/$_3.JPG"></send-money>
+</section>

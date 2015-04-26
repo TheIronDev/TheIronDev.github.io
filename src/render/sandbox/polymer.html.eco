@@ -1,5 +1,5 @@
 ---
-title: "Send Money Polymer"
+title: "Send Money: Polymer"
 layout: "default"
 isPage: true
 hideName: true
@@ -10,6 +10,7 @@ wrapperClass: "vertical-center"
 <link rel="import" href="http://localhost:8000/myaccount/transfer/html/webcomponents/send-money.html" />
 
 <style>
+	.container {max-width: 100%;}
 	.sendmoney-wrappers {
 		background: rgba(255,255,255,0.3);
 	}

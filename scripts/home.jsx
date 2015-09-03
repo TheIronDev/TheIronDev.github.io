@@ -3,9 +3,9 @@ import React from 'react';
 
 export default class Home extends React.Component {
 	render() {
-		return <div>
+		return <div className="profile_Wrapper">
 			<h1>Tyler Stark</h1>
-			<div id="profile"></div>
+			<div className="profile_imageWrapper"></div>
 		</div>;
 	}
-}
+};

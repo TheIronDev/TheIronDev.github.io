@@ -1,6 +1,7 @@
 
+// Load Styles
 require('./styles.less');
 
-module.exports = function() {
-	console.log('hello world');
-};
+// Load JS
+var Portfolio = require('./scripts/portfolio.jsx');
+

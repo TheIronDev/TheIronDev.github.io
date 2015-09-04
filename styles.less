@@ -4,22 +4,30 @@ html {height:100%;margin: 0}
 body {
 }
 .app_wrapper{height: 100%}
-.app_element {display:flex; height: 100%}
+.app_element {height: 100%}
 
+.navigation {position: absolute;display: flex;width: 100%;}
+.navigation_list {margin: 0 auto; padding:0;display: flex}
+.navigation_item {list-style: none; margin: 3em 3em 0;}
+.navigation_item.active {text-decoration: underline;}
+
+.container_wrapper {display: flex;height: 100%}
 .container {
   align-self: center;
   margin: 0 auto;
 }
 
 .profile_Wrapper {
+  align-self: center;
   display: flex;
   flex-flow: column;
+  margin: 0 auto;
 }
 .profile_imageWrapper {
   width: 10rem;
   height: 10rem;
   background: #0b97c4;
-//  background: url('images/tystark.jpeg');
+  background: url('./images/tystark.jpeg');
   background-size: cover;
   border: 1px solid white;
   border-radius: 50%;

@@ -1,20 +1,23 @@
 
 import React from 'react';
+
+import Navigation from './navigation.jsx';
 import Home from './home.jsx';
 
-export default class App extends React.Component {
+export default React.createClass({
+	getInitialState() {
+		return {
+			activePage: 'Home'
+		};
+	},
 	render() {
+
+		let activePage = this.state.activePage;
 		return <div className="app_element">
-			<nav>
-				<ul>
-					<li>Home</li>
-					<li>Portfolio</li>
-					<li>Github</li>
-				</ul>
-			</nav>
-			<main className="container">
+			<Navigation active={activePage} />
+			<div className="container_wrapper">
 				<Home />
-			</main>
+			</div>
 		</div>;
 	}
-};
+});

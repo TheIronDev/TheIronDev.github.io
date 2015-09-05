@@ -8,11 +8,18 @@ import Home from './pages/home.jsx';
 import Portfolio from './pages/portfolio.jsx';
 import About from './pages/about.jsx';
 
+// Flux
+import AppStore from './stores/AppStore.es6';
+
 export default React.createClass({
 	getInitialState() {
-		return {
-			activePage: 'Home'
-		};
+		return AppStore.getAppState();
+	},
+	componentDidMount() {
+		AppStore.on('change', this._onChange);
+	},
+	componentWillUnmount() {
+		AppStore.removeListener('change', this._onChange);
 	},
 	render() {
 
@@ -30,5 +37,8 @@ export default React.createClass({
 				{Page}
 			</div>
 		</div>;
+	},
+	_onChange(change) {
+		this.setState(AppStore.getAppState());
 	}
 });

@@ -29,7 +29,7 @@ module.exports = [
 		description: 'I created this webapp with the intention of exploring Backbone.js and later to explore Require.js.',
 		image: '',
 		link: 'http://www.pokechecklist.com/',
-		company: '',
+		company: 'Personal',
 		technology: ['JavaScript', 'Backbone.js', 'CSS'],
 		year: '2012'
 	}, {
@@ -71,6 +71,22 @@ module.exports = [
 		link: 'http://luxury.homeaway.com/',
 		company: 'HomeAway',
 		technology: ['JavaSpring', 'CSS'],
+		year: '2013'
+	}, {
+		name: 'Number.toLocaleString Shim',
+		description: 'Simple shim that overrides .toLocaleString() if they don\'t properly localize numbers.',
+		image: '',
+		link: 'https://github.com/TheIronDeveloper/NumberToLocaleStringPatch',
+		company: 'Personal',
+		technology: ['JavaScript'],
+		year: '2013'
+	}, {
+		name: 'WonderTrade Analytics',
+		description: 'In an effort to learn Node.js, I built a webapp that aggregates user-submitted pokemon data',
+		image: '',
+		link: 'http://www.wondertradeanalytics.com/',
+		company: 'Personal',
+		technology: ['JavaScript', 'Node.js'],
 		year: '2013'
 	}
 ];

@@ -20499,7 +20499,8 @@
 				Portfolio: _react2['default'].createElement(_pagesPortfolioJsx2['default'], null),
 				About: _react2['default'].createElement(_pagesAboutJsx2['default'], null)
 			},
-			    Page = Pages[activePage] || Pages.Home;
+			    Page = Pages[activePage] || Pages.Home,
+			    containerClassName = 'container ' + activePage;
 
 			return _react2['default'].createElement(
 				'div',
@@ -20508,7 +20509,11 @@
 				_react2['default'].createElement(
 					'div',
 					{ className: 'container_wrapper' },
-					Page
+					_react2['default'].createElement(
+						'div',
+						{ className: containerClassName },
+						Page
+					)
 				)
 			);
 		},
@@ -20655,21 +20660,21 @@
 /* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(1);
 
@@ -20681,45 +20686,49 @@
 		function Home() {
 			_classCallCheck(this, Home);
 
-			_get(Object.getPrototypeOf(Home.prototype), 'constructor', this).apply(this, arguments);
+			_get(Object.getPrototypeOf(Home.prototype), "constructor", this).apply(this, arguments);
 		}
 
 		_createClass(Home, [{
-			key: 'render',
+			key: "render",
 			value: function render() {
-				return _react2['default'].createElement(
-					'div',
-					null,
-					'Portfolio'
+				return _react2["default"].createElement(
+					"div",
+					{ className: "portfolio_wrapper" },
+					_react2["default"].createElement(
+						"h2",
+						null,
+						"Portfolio"
+					)
 				);
 			}
 		}]);
 
 		return Home;
-	})(_react2['default'].Component);
+	})(_react2["default"].Component);
 
-	exports['default'] = Home;
-	module.exports = exports['default'];
+	exports["default"] = Home;
+	module.exports = exports["default"];
 
 /***/ },
 /* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(1);
 
@@ -20731,25 +20740,44 @@
 		function Home() {
 			_classCallCheck(this, Home);
 
-			_get(Object.getPrototypeOf(Home.prototype), 'constructor', this).apply(this, arguments);
+			_get(Object.getPrototypeOf(Home.prototype), "constructor", this).apply(this, arguments);
 		}
 
 		_createClass(Home, [{
-			key: 'render',
+			key: "render",
 			value: function render() {
-				return _react2['default'].createElement(
-					'div',
-					null,
-					'About'
+				return _react2["default"].createElement(
+					"div",
+					{ className: "about_wrapper" },
+					_react2["default"].createElement(
+						"h2",
+						null,
+						"Hi there!"
+					),
+					_react2["default"].createElement(
+						"p",
+						null,
+						"I'm a frontend software engineer currently working for PayPal."
+					),
+					_react2["default"].createElement(
+						"p",
+						null,
+						"My passion is to develop exceptional user experiences, while still maintaining quality code."
+					),
+					_react2["default"].createElement(
+						"p",
+						null,
+						"I am very much a JavaScript guy. Most of my focus is in the browser... but I enjoy server side JavaScripting just as much."
+					)
 				);
 			}
 		}]);
 
 		return Home;
-	})(_react2['default'].Component);
+	})(_react2["default"].Component);
 
-	exports['default'] = Home;
-	module.exports = exports['default'];
+	exports["default"] = Home;
+	module.exports = exports["default"];
 
 /***/ },
 /* 162 */
@@ -20852,7 +20880,7 @@
 
 
 	// module
-	exports.push([module.id, "body,\nhtml {\n  height: 100%;\n  margin: 0;\n}\n.app_wrapper {\n  height: 100%;\n  background-image: url(" + __webpack_require__(191) + ");\n  font-family: \"Helvetica Neue Light\", \"HelveticaNeue-Light\", \"Helvetica Neue\", Calibri, Helvetica, Arial;\n  color: #efefef;\n}\n.app_element {\n  height: 100%;\n}\n.navigation {\n  position: absolute;\n  display: flex;\n  width: 100%;\n}\n.navigation_list {\n  margin: 0 auto;\n  padding: 0;\n  display: flex;\n}\n.navigation_item {\n  list-style: none;\n  margin: 3em 3em 0;\n}\n.navigation_item.active {\n  text-decoration: underline;\n}\n.container_wrapper {\n  display: flex;\n  height: 100%;\n}\n.container {\n  align-self: center;\n  margin: 0 auto;\n}\n.profile_Wrapper {\n  align-self: center;\n  display: flex;\n  flex-flow: column;\n  margin: 0 auto;\n}\n.profile_imageWrapper {\n  width: 10rem;\n  height: 10rem;\n  background: #0b97c4;\n  background: url(" + __webpack_require__(166) + ");\n  background-size: cover;\n  border: 1px solid white;\n  border-radius: 50%;\n  margin: 0 auto;\n}\n.profile_item {\n  width: 3em;\n  height: 3em;\n  display: flex;\n  border: 1px solid #000;\n  border-radius: 50%;\n}\n", ""]);
+	exports.push([module.id, "* {\n  box-sizing: border-box;\n  -moz-box-sizing: border-box;\n}\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n}\nh1,\nh2,\nh3 {\n  text-align: center;\n}\nh2,\nh3 {\n  margin: 0;\n}\n.app_wrapper {\n  height: 100%;\n  background-image: url(" + __webpack_require__(191) + ");\n  font-family: \"Helvetica Neue Light\", \"HelveticaNeue-Light\", \"Helvetica Neue\", Calibri, Helvetica, Arial;\n  color: #efefef;\n}\n.app_element {\n  height: 100%;\n}\n.navigation {\n  position: absolute;\n  display: flex;\n  width: 100%;\n}\n.navigation_list {\n  margin: 0 auto;\n  padding: 0;\n  display: flex;\n}\n.navigation_item {\n  list-style: none;\n  margin: 3em 3em 0;\n  cursor: pointer;\n}\n.navigation_item.active {\n  text-decoration: underline;\n}\n.container_wrapper {\n  display: flex;\n  height: 100%;\n}\n.container {\n  transition: all .5s ease;\n}\n.container.Home {\n  align-self: center;\n  padding: 1em;\n  margin: 5em auto;\n  width: 100%;\n  max-width: 500px;\n  background: transparent;\n  color: #ffffff;\n}\n.container.About {\n  align-self: center;\n  padding: 1em;\n  margin: 5em auto;\n  width: 100%;\n  max-width: 500px;\n  background: rgba(255, 255, 255, 0.5);\n  color: #333333;\n}\n.container.Portfolio {\n  padding: 1em;\n  margin: 5em auto;\n  width: 100%;\n  max-width: 800px;\n  background: rgba(255, 255, 255, 0.5);\n  color: #333333;\n}\n.profile_imageWrapper {\n  width: 10rem;\n  height: 10rem;\n  background: #0b97c4;\n  background: url(" + __webpack_require__(166) + ");\n  background-size: cover;\n  border: 1px solid white;\n  border-radius: 50%;\n  margin: 0 auto;\n}\n.profile_item {\n  width: 3em;\n  height: 3em;\n  display: flex;\n  border: 1px solid #000;\n  border-radius: 50%;\n}\n", ""]);
 
 	// exports
 

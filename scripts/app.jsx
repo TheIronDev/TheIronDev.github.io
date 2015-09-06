@@ -29,12 +29,15 @@ export default React.createClass({
 				Portfolio: <Portfolio />,
 				About: <About />
 			},
-			Page = Pages[activePage] || Pages.Home;
+			Page = Pages[activePage] || Pages.Home,
+			containerClassName = `container ${activePage}`;
 
 		return <div className="app_element">
 			<Navigation active={activePage} />
 			<div className="container_wrapper">
-				{Page}
+				<div className={containerClassName}>
+					{Page}
+				</div>
 			</div>
 		</div>;
 	},

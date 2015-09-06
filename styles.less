@@ -1,13 +1,24 @@
+@whiteBackground: rgba(255,255,255,0.5);
+
+.contentPage(@maxWidth, @backgound, @textColor) {
+  padding: 1em;
+  margin: 5em auto;
+  width: 100%;
+  max-width: @maxWidth;
+  background: @backgound;
+  color: @textColor;
+}
+
+* {;box-sizing: border-box;-moz-box-sizing: border-box}
 body,
 html {height:100%;margin: 0}
-
 body {
 }
+h1, h2, h3 {text-align: center;}
+h2, h3 {margin: 0;}
 .app_wrapper{
   height: 100%;
-
   background-image: url('./images/background.jpg');
-
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
   color: #efefef;
 }
@@ -15,21 +26,26 @@ body {
 
 .navigation {position: absolute;display: flex;width: 100%;}
 .navigation_list {margin: 0 auto; padding:0;display: flex}
-.navigation_item {list-style: none; margin: 3em 3em 0;}
+.navigation_item {list-style: none; margin: 3em 3em 0;cursor: pointer}
 .navigation_item.active {text-decoration: underline;}
 
 .container_wrapper {display: flex;height: 100%}
+
 .container {
+  transition: all .5s ease;
+}
+.container.Home {
   align-self: center;
-  margin: 0 auto;
+  .contentPage(500px, transparent, #fff);
+}
+.container.About {
+  align-self: center;
+  .contentPage(500px, @whiteBackground, #333);
+}
+.container.Portfolio {
+  .contentPage(800px, @whiteBackground, #333);
 }
 
-.profile_Wrapper {
-  align-self: center;
-  display: flex;
-  flex-flow: column;
-  margin: 0 auto;
-}
 .profile_imageWrapper {
   width: 10rem;
   height: 10rem;

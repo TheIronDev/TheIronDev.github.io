@@ -25,9 +25,9 @@ export default React.createClass({
 
 		let activePage = this.state.activePage,
 			Pages = {
-				Home: <Home />,
-				Portfolio: <Portfolio />,
-				About: <About />
+				Home: <Home {...this.state} />,
+				Portfolio: <Portfolio {...this.state} />,
+				About: <About {...this.state} />
 			},
 			Page = Pages[activePage] || Pages.Home,
 			containerClassName = `container ${activePage}`;

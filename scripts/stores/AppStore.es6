@@ -8,12 +8,19 @@
 import AppDispatcher from '../AppDispatcher.es6';
 import AppConstants from '../AppConstants.es6';
 
+import allPortfolioItems from '../data/portfolio.js';
+
 let Store = {
+
 	activePage: 'Home',
+	allPortfolioItems,
+
+	portfolioItems: allPortfolioItems,
 
 	getAppState() {
 		return {
-			activePage: this.activePage
+			activePage: this.activePage,
+			portfolioItems: this.portfolioItems
 		}
 	},
 

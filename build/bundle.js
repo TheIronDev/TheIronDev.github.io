@@ -21302,14 +21302,6 @@
 			technology: ['JavaScript', 'Backbone.js'],
 			year: '2012'
 		}, {
-			name: 'Jasmine Unit Testing',
-			description: 'In an effort to improve javascript quality, I introduced Jasmine Unit Testing to HomeAway\'s codebase. Every Friday, I would run a Grunt task to display if there were any Jasmine test failures, as well as the number of unit tests written.',
-			image: '',
-			link: '',
-			company: 'HomeAway',
-			technology: ['Jasmine'],
-			year: '2012'
-		}, {
 			name: 'HomeAway Search Async Filtering',
 			description: 'I developed the Search Filter functionality found on the search pages of HomeAway.com using Backbone.js, exposing an endpoint to filter vacation rentals asynchronously.',
 			image: '',
@@ -21349,6 +21341,38 @@
 			company: 'Personal',
 			technology: ['JavaScript', 'Node.js'],
 			year: '2013'
+		}, {
+			name: 'PayPal\'s Person-to-Person SendMoney WebApp',
+			description: 'I am one of the engineers working on PayPal\'s send-money to friends and family.',
+			image: '',
+			link: 'https://www.paypal.com/myaccount/transfer/',
+			company: 'PayPal',
+			technology: ['JavaScript', 'Node.js', 'Backbone.js', 'React.js'],
+			year: '2014'
+		}, {
+			name: 'Contact Book on SendMoney pages',
+			description: 'I integrated the contact book found on the send-money pages',
+			image: '',
+			link: 'https://www.paypal.com/myaccount/transfer/send',
+			company: 'PayPal',
+			technology: ['Node.js', 'Backbone.js'],
+			year: '2014'
+		}, {
+			name: 'SendMoney 3rd-Party Integration',
+			description: 'I created the overall architecture for the sendmoney experience to integrate with 3rd-party experiences including Outlook and PayPal.me',
+			image: '',
+			link: 'https://www.paypal.com/myaccount/transfer/',
+			company: 'PayPal',
+			technology: ['JavaScript', 'Node.js', 'CSS'],
+			year: '2015'
+		}, {
+			name: 'Outlook.com\'s PayPal App',
+			description: 'I served as the tech-lead for integrating PayPal\'s send money experience onto Outlook.com ',
+			image: '',
+			link: 'https://store.office.com/paypal-for-outlook-WA104379615.aspx',
+			company: 'PayPal',
+			technology: ['JavaScript', 'Node.js'],
+			year: '2015'
 		}
 	];
 
@@ -21387,7 +21411,7 @@
 
 
 	// module
-	exports.push([module.id, "* {\n  box-sizing: border-box;\n  -moz-box-sizing: border-box;\n}\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n}\nh1,\nh2,\nh3 {\n  text-align: center;\n}\nh2,\nh3 {\n  margin: 0;\n}\n.app_wrapper {\n  height: 100%;\n  background-image: url(" + __webpack_require__(173) + ");\n  font-family: \"Helvetica Neue Light\", \"HelveticaNeue-Light\", \"Helvetica Neue\", Calibri, Helvetica, Arial;\n  color: #efefef;\n}\n.app_element {\n  height: 100%;\n}\n.navigation {\n  position: absolute;\n  display: flex;\n  width: 100%;\n}\n.navigation_list {\n  margin: 0 auto;\n  padding: 0;\n  display: flex;\n}\n.navigation_item {\n  list-style: none;\n  margin: 3em 3em 0;\n  cursor: pointer;\n}\n.navigation_item.active {\n  text-decoration: underline;\n}\n.container_wrapper {\n  display: flex;\n  height: 100%;\n}\n.container {\n  transition: all .5s ease;\n}\n.container.Home {\n  align-self: center;\n  padding: 1em;\n  margin: 5em auto;\n  width: 100%;\n  max-width: 500px;\n  background: transparent;\n  color: #ffffff;\n}\n.container.About {\n  align-self: center;\n  padding: 1em;\n  margin: 5em auto;\n  width: 100%;\n  max-width: 500px;\n  background: rgba(255, 255, 255, 0.5);\n  color: #333333;\n}\n.container.Portfolio {\n  padding: 1em;\n  margin: 5em auto;\n  width: 100%;\n  max-width: 800px;\n  background: rgba(255, 255, 255, 0.5);\n  color: #333333;\n}\n.profile_imageWrapper {\n  width: 10rem;\n  height: 10rem;\n  background: #0b97c4;\n  background: url(" + __webpack_require__(174) + ");\n  background-size: cover;\n  border: 1px solid white;\n  border-radius: 50%;\n  margin: 0 auto;\n}\n.profile_item {\n  width: 3em;\n  height: 3em;\n  display: flex;\n  border: 1px solid #000;\n  border-radius: 50%;\n}\n.portfolio_itemWrapper {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  padding: 0;\n  list-style: none;\n}\n.portfolio_year {\n  width: 100%;\n  border-bottom: 1px solid #666;\n  margin-bottom: 0.5em;\n}\n.portfolio_item {\n  height: 4em;\n  width: 24%;\n  margin: 0 1% 1% 0;\n  padding: 0.5em;\n  border: 1px solid #efefef;\n  text-align: center;\n}\n", ""]);
+	exports.push([module.id, "* {\n  box-sizing: border-box;\n  -moz-box-sizing: border-box;\n}\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n}\nhtml {\n  background: url(" + __webpack_require__(173) + ") no-repeat #d4d7a3;\n  background-size: cover;\n  min-height: 100%;\n}\nh1,\nh2,\nh3 {\n  text-align: center;\n}\nh1 {\n  color: #ffffff;\n}\nh2,\nh3 {\n  margin: 0;\n}\n.app_wrapper {\n  height: 100%;\n  font-family: \"Helvetica Neue Light\", \"HelveticaNeue-Light\", \"Helvetica Neue\", Calibri, Helvetica, Arial;\n  color: #efefef;\n}\n.app_element {\n  height: 100%;\n}\n.navigation {\n  position: absolute;\n  display: flex;\n  width: 100%;\n}\n.navigation_list {\n  margin: 0 auto;\n  padding: 0;\n  display: flex;\n}\n.navigation_item {\n  list-style: none;\n  margin: 3em 3em 0;\n  cursor: pointer;\n}\n.navigation_item.active {\n  text-decoration: underline;\n}\n.container_wrapper {\n  display: flex;\n  height: 100%;\n}\n.container {\n  transition: all .5s ease;\n}\n.container.Home {\n  align-self: center;\n  padding: 1em;\n  margin: 5em auto;\n  width: 100%;\n  max-width: 500px;\n}\n.container.About {\n  align-self: center;\n  background: rgba(0, 0, 0, 0.2);\n  padding: 1em;\n  margin: 5em auto;\n  width: 100%;\n  max-width: 500px;\n}\n.container.Portfolio {\n  padding: 1em;\n  margin: 5em auto;\n  width: 100%;\n  max-width: 800px;\n}\n.profile_imageWrapper {\n  width: 10rem;\n  height: 10rem;\n  background: #0b97c4;\n  background: url(" + __webpack_require__(174) + ");\n  background-size: cover;\n  border: 1px solid white;\n  border-radius: 50%;\n  margin: 0 auto;\n}\n.profile_item {\n  width: 3em;\n  height: 3em;\n  display: flex;\n  border: 1px solid #000;\n  border-radius: 50%;\n}\n.portfolio_itemWrapper {\n  display: flex;\n  flex-wrap: wrap;\n  padding: 0;\n  list-style: none;\n}\n.portfolio_year {\n  width: 100%;\n  border-bottom: 1px solid #000;\n  padding: 0.5em;\n  margin-bottom: 0.5em;\n}\n.portfolio_item {\n  height: 4em;\n  width: 32%;\n  margin: 1% 0.5%;\n  padding: 0.5em;\n  background: #fff;\n  color: #333;\n  border: 1px solid #efefef;\n  text-align: center;\n}\n", ""]);
 
 	// exports
 

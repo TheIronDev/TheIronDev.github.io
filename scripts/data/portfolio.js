@@ -41,14 +41,6 @@ module.exports = [
 		technology: ['JavaScript', 'Backbone.js'],
 		year: '2012'
 	}, {
-		name: 'Jasmine Unit Testing',
-		description: 'In an effort to improve javascript quality, I introduced Jasmine Unit Testing to HomeAway\'s codebase. Every Friday, I would run a Grunt task to display if there were any Jasmine test failures, as well as the number of unit tests written.',
-		image: '',
-		link: '',
-		company: 'HomeAway',
-		technology: ['Jasmine'],
-		year: '2012'
-	}, {
 		name: 'HomeAway Search Async Filtering',
 		description: 'I developed the Search Filter functionality found on the search pages of HomeAway.com using Backbone.js, exposing an endpoint to filter vacation rentals asynchronously.',
 		image: '',
@@ -88,5 +80,37 @@ module.exports = [
 		company: 'Personal',
 		technology: ['JavaScript', 'Node.js'],
 		year: '2013'
+	}, {
+		name: 'PayPal\'s Person-to-Person SendMoney WebApp',
+		description: 'I am one of the engineers working on PayPal\'s send-money to friends and family.',
+		image: '',
+		link: 'https://www.paypal.com/myaccount/transfer/',
+		company: 'PayPal',
+		technology: ['JavaScript', 'Node.js', 'Backbone.js', 'React.js'],
+		year: '2014'
+	}, {
+		name: 'Contact Book on SendMoney pages',
+		description: 'I integrated the contact book found on the send-money pages',
+		image: '',
+		link: 'https://www.paypal.com/myaccount/transfer/send',
+		company: 'PayPal',
+		technology: ['Node.js', 'Backbone.js'],
+		year: '2014'
+	}, {
+		name: 'SendMoney 3rd-Party Integration',
+		description: 'I created the overall architecture for the sendmoney experience to integrate with 3rd-party experiences including Outlook and PayPal.me',
+		image: '',
+		link: 'https://www.paypal.com/myaccount/transfer/',
+		company: 'PayPal',
+		technology: ['JavaScript', 'Node.js', 'CSS'],
+		year: '2015'
+	}, {
+		name: 'Outlook.com\'s PayPal App',
+		description: 'I served as the tech-lead for integrating PayPal\'s send money experience onto Outlook.com ',
+		image: '',
+		link: 'https://store.office.com/paypal-for-outlook-WA104379615.aspx',
+		company: 'PayPal',
+		technology: ['JavaScript', 'Node.js'],
+		year: '2015'
 	}
 ];

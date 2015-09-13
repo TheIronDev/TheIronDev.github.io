@@ -1,7 +1,11 @@
 
+@import "./styles/mixins/for";
+
 @whiteBackground: rgba(255,255,255,0.5);
 
 @gradientEdge: #d4d7a3;
+
+@companies: paypal, homeaway, jackrabbit, razorfish;
 
 .contentPage(@maxWidth) {
   padding: 1em;
@@ -80,11 +84,13 @@ h2, h3 {margin: 0;}
   list-style: none;
 }
 .portfolio_year {
+  text-shadow: 1px 1px 1px #333;
   width: 100%;
   border-bottom: 1px solid #000;
   padding: 0.5em;
   margin-bottom: 0.5em;
 }
+
 .portfolio_item {
   height: 4em;
   width: 32%;
@@ -97,4 +103,17 @@ h2, h3 {margin: 0;}
 
   border: 1px solid #efefef;
   text-align: center;
+
+  @media (max-width: 800px) {
+   width: 100%;
+  }
+
+//  Loop through the companies in my profile to tack on a little icon on the top right corner
+  .for(@companies); .-each(@company) {
+    &.company-@{company} {
+      background: url('./images/icons/@{company}.png') no-repeat top right #fff;
+      padding: 0.5em 2em;
+      background-size: 1.8em;
+    }
+  }
 }

@@ -15,7 +15,11 @@ export default class Home extends React.Component {
 		return years.map((year) => {
 
 			let items = (yearObj[year]).map((portfolioItem) => {
-				return (<li className="portfolio_item">
+
+				let company = (portfolioItem.company || '').toLowerCase(),
+					itemClassName = `portfolio_item ${company ? 'company-' + company : ''}`;
+
+				return (<li className={itemClassName}>
 					{portfolioItem.name}
 				</li>);
 			});

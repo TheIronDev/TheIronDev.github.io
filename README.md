@@ -39,17 +39,3 @@ The general workflow is a little confusing at first, but let me see if I can sum
 
 Incredibly Useful Resource: [Flux For Stupid People](http://blog.andrewray.me/flux-for-stupid-people/)
 
-
-## WebPack Breakdown
-
-```
-entry
-  |
-  |-- styles.less
-  |
-  |-- scripts/app.jsx
-           |
-           |-- navigation.jsx
-           |
-           |-- home.jsx
-```

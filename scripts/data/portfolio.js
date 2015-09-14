@@ -7,9 +7,9 @@ module.exports = [
 		link: '',
 		company: 'Razorfish',
 		technology: ['CSS', 'JavaScript', 'ASP', 'Flash'],
-		year: '2010'
+		year: '2008'
 	}, {
-		name: 'Favorites on HomeAway',
+		name: 'Favorites on HomeAway.com',
 		description: 'My first large project with HomeAway was to develop the "Favorites" functionality. This involved exposing endpoint for favorite calls, writing jQuery plugins to handle "favoriting" and "saving notes", and building the UI for the favorites page.',
 		image: '',
 		link: '',
@@ -26,14 +26,14 @@ module.exports = [
 		year: '2012'
 	}, {
 		name: 'Pokemon Checklist',
-		description: 'I created this webapp with the intention of exploring Backbone.js and later to explore Require.js.',
+		description: 'This is a simple webapp that saves a checklist of pokemon to localStorage. I created this webapp with the intention of exploring Backbone.js and later to learn more about Require.js.',
 		image: '',
 		link: 'http://www.pokechecklist.com/',
 		company: 'Personal',
 		technology: ['JavaScript', 'Backbone.js', 'CSS'],
 		year: '2012'
 	}, {
-		name: 'Backbone.js Rewrite at HomeAway',
+		name: 'Backbone.js Rewrite at HomeAway.com',
 		description: 'I came up with a strategy to integrate Backbone into the HomeAway.com codebase. The previous JavaScript code was not modularized, so I slowly moved chunks of code to separate Backbone models or views, followed up by creating presentations every week to ensure my team was comfortable with the new patterns.',
 		image: '',
 		link: '',
@@ -41,7 +41,7 @@ module.exports = [
 		technology: ['JavaScript', 'Backbone.js'],
 		year: '2012'
 	}, {
-		name: 'HomeAway Search Async Filtering',
+		name: 'HomeAway.com Async Search Filtering',
 		description: 'I developed the Search Filter functionality found on the search pages of HomeAway.com using Backbone.js, exposing an endpoint to filter vacation rentals asynchronously.',
 		image: '',
 		link: 'http://www.homeaway.com/search',
@@ -73,15 +73,23 @@ module.exports = [
 		technology: ['JavaScript'],
 		year: '2013'
 	}, {
+		name: 'Pokemon WonderTrade Statistics Experiment',
+		description: 'A side project intended to aggregate and display data on Pokemon X/Y\'s wonder trade system',
+		image: '',
+		link: 'http://pokewondertrade.com/',
+		company: 'Personal',
+		technology: ['JavaScript', 'HighCharts'],
+		year: '2013'
+	}, {
 		name: 'WonderTrade Analytics',
-		description: 'In an effort to learn Node.js, I built a webapp that aggregates user-submitted pokemon data',
+		description: 'In an effort to teach myself Node.js, I built a webapp that aggregates user-submitted pokemon data',
 		image: '',
 		link: 'http://www.wondertradeanalytics.com/',
 		company: 'Personal',
-		technology: ['JavaScript', 'Node.js'],
+		technology: ['JavaScript', 'Node.js', 'HighCharts'],
 		year: '2013'
 	}, {
-		name: 'PayPal\'s Person-to-Person SendMoney WebApp',
+		name: 'Person-to-Person SendMoney WebApp',
 		description: 'I am one of the engineers working on PayPal\'s send-money to friends and family.',
 		image: '',
 		link: 'https://www.paypal.com/myaccount/transfer/',
@@ -97,12 +105,36 @@ module.exports = [
 		technology: ['Node.js', 'Backbone.js'],
 		year: '2014'
 	}, {
+		name: 'Console.star npm Module',
+		description: 'Console.star is a helper function that calls console.log with stars pre and post-appended',
+		image: '',
+		link: 'https://www.npmjs.com/package/console.star',
+		company: 'Personal',
+		technology: ['Node.js', 'JavaScript'],
+		year: '2014'
+	}, {
 		name: 'SendMoney 3rd-Party Integration',
 		description: 'I created the overall architecture for the sendmoney experience to integrate with 3rd-party experiences including Outlook and PayPal.me',
 		image: '',
 		link: 'https://www.paypal.com/myaccount/transfer/',
 		company: 'PayPal',
 		technology: ['JavaScript', 'Node.js', 'CSS'],
+		year: '2015'
+	}, {
+		name: 'Pokemon Catch Rate Calculator',
+		description: 'An Ember.js webapp that calculates the odds of catching a Pokemon',
+		image: '',
+		link: 'http://theirondeveloper.com/pokemon-catch-rate/',
+		company: 'Personal',
+		technology: ['JavaScript', 'Ember'],
+		year: '2015'
+	}, {
+		name: 'Jenova: Game of Life Module',
+		description: 'A game of life module that is intended to work both in a server side and client side environment.',
+		image: '',
+		link: 'https://www.npmjs.com/package/jenova',
+		company: 'Personal',
+		technology: ['JavaScript', 'Node.js'],
 		year: '2015'
 	}, {
 		name: 'Outlook.com\'s PayPal App',

@@ -92,17 +92,19 @@ h2, h3 {margin: 0;}
 }
 
 .portfolio_item {
+  cursor: pointer;
   height: 4em;
-  width: 32%;
+  width: 49%;
 
   margin: 1% 0.5%;
-  padding: 0.5em;
 
   background: #fff;
   color: #333;
 
   border: 1px solid #efefef;
   text-align: center;
+
+  position: relative;
 
   @media (max-width: 800px) {
    width: 100%;
@@ -112,8 +114,44 @@ h2, h3 {margin: 0;}
   .for(@companies); .-each(@company) {
     &.company-@{company} {
       background: url('./images/icons/@{company}.png') no-repeat top right #fff;
-      padding: 0.5em 2em;
       background-size: 1.8em;
+
+      .portfolio_item_title {
+        padding: 0.5em 2em;
+      }
     }
   }
+}
+.portfolio_item_title {
+  padding: 0.5em;
+  height: 4em;
+}
+.portfolio_item_description {
+  background: #333;
+  color: #fff;
+  height: 0;
+  padding: 0 0.5em;
+
+  overflow: hidden;
+
+  border-radius: 0 0 1em 1em;
+
+  transition: all .5s ease;
+  position: absolute;
+  z-index: 1;
+}
+
+.portfolio_item_image {
+  max-width: 100%;
+  padding: 0 0.5em 0.5em;
+  display: block;
+}
+
+.portfolio_item:hover,
+.portfolio_item:focus {
+  .portfolio_item_description {
+    height: 100%;
+    padding: 0.5em;
+  }
+
 }

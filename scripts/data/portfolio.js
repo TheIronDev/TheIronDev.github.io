@@ -11,7 +11,7 @@ module.exports = [
 	}, {
 		name: 'Favorites on HomeAway.com',
 		description: 'My first large project with HomeAway was to develop the "Favorites" functionality. This involved exposing endpoint for favorite calls, writing jQuery plugins to handle "favoriting" and "saving notes", and building the UI for the favorites page.',
-		image: '',
+		image: './images/portfolio/homeaway_favorites.jpg',
 		link: '',
 		company: 'HomeAway',
 		technology: ['Java', 'JavaScript', 'Backbone.js', 'CSS'],
@@ -27,7 +27,7 @@ module.exports = [
 	}, {
 		name: 'Pokemon Checklist',
 		description: 'This is a simple webapp that saves a checklist of pokemon to localStorage. I created this webapp with the intention of exploring Backbone.js and later to learn more about Require.js.',
-		image: '',
+		image: './images/portfolio/pokechecklist.jpg',
 		link: 'http://www.pokechecklist.com/',
 		company: 'Personal',
 		technology: ['JavaScript', 'Backbone.js', 'CSS'],
@@ -43,7 +43,7 @@ module.exports = [
 	}, {
 		name: 'HomeAway.com Async Search Filtering',
 		description: 'I developed the Search Filter functionality found on the search pages of HomeAway.com using Backbone.js, exposing an endpoint to filter vacation rentals asynchronously.',
-		image: '',
+		image: './images/portfolio/homeaway_searchFilters.jpg',
 		link: 'http://www.homeaway.com/search',
 		company: 'HomeAway',
 		technology: ['Java', 'Backbone.js'],
@@ -51,7 +51,7 @@ module.exports = [
 	}, {
 		name: 'TXPeP Webapp',
 		description: 'The Texas Policy Evaluation Project group had requested a webapp be built to help disseminate data on Planned Parenthood Clinics in Texas.',
-		image: '',
+		image: './images/portfolio/txpep.jpg',
 		link: 'http://www.prc.utexas.edu/txpep/',
 		company: 'JackRabbit',
 		technology: ['HighCharts', 'Backbone.js'],
@@ -59,7 +59,7 @@ module.exports = [
 	}, {
 		name: 'HomeAway Luxury',
 		description: 'After I ported our CSS to Sass, I reskinned HomeAway.com to make a luxury version at Luxury.HomeAway.com',
-		image: '',
+		image: './images/portfolio/homeaway_luxury.jpg',
 		link: 'http://luxury.homeaway.com/',
 		company: 'HomeAway',
 		technology: ['JavaSpring', 'CSS'],

@@ -14,13 +14,26 @@ export default class Home extends React.Component {
 
 		return years.map((year) => {
 
-			let items = (yearObj[year]).map((portfolioItem) => {
+			let items = (yearObj[year]).map((portfolioItem, index) => {
 
 				let company = (portfolioItem.company || '').toLowerCase(),
-					itemClassName = `portfolio_item ${company ? 'company-' + company : ''}`;
+					portfolioImage = portfolioItem.image ? (<img className="portfolio_item_image" src={portfolioItem.image} />) : '',
+					itemPositionClassMap = {
+						0: 'left',
+						1: 'center',
+						2: 'right'
+					},
+					itemPositionClass = itemPositionClassMap[index%3],
+					companyClass = company ? 'company-' + company : '',
+					itemClassName = `portfolio_item ${companyClass}`,
+					descriptionClassName = `portfolio_item_description ${itemPositionClass}`;
 
-				return (<li className={itemClassName}>
-					{portfolioItem.name}
+				return (<li className={itemClassName} tabIndex="0">
+					<div className="portfolio_item_title">{portfolioItem.name}</div>
+					<div className={descriptionClassName}>
+						{portfolioImage}
+						{portfolioItem.description}
+					</div>
 				</li>);
 			});
 

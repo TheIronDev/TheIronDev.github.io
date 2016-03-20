@@ -2,7 +2,8 @@
 module.exports = [
 	{
 		name: 'RazorFish Frontend Web Development',
-		description: 'Unfortunately, I can\'t publically share my past work with Razorfish (sorry). Feel free to contact me directly if you would like to know more.',
+		description: 'The start of my career was building out websites for Razorfish.',
+		customClass: 'bottomScaled',
 		image: '',
 		link: '',
 		company: 'Razorfish',
@@ -12,6 +13,7 @@ module.exports = [
 		name: 'Favorites on HomeAway.com',
 		description: 'My first large project with HomeAway was to develop the "Favorites" functionality. This involved exposing endpoint for favorite calls, writing jQuery plugins to handle "favoriting" and "saving notes", and building the UI for the favorites page.',
 		image: './images/portfolio/homeaway_favorites.jpg',
+		customClass: 'bottomScaled',
 		link: '',
 		company: 'HomeAway',
 		technology: ['Java', 'JavaScript', 'Backbone.js', 'CSS'],
@@ -36,7 +38,7 @@ module.exports = [
 		name: 'Backbone.js Rewrite at HomeAway.com',
 		description: 'I came up with a strategy to integrate Backbone into the HomeAway.com codebase. The previous JavaScript code was not modularized, so I slowly moved chunks of code to separate Backbone models or views, followed up by creating presentations every week to ensure my team was comfortable with the new patterns.',
 		image: '',
-		link: '',
+		link: 'http://www.homeaway.com/',
 		company: 'HomeAway',
 		technology: ['JavaScript', 'Backbone.js'],
 		year: '2012'
@@ -144,5 +146,13 @@ module.exports = [
 		company: 'PayPal',
 		technology: ['JavaScript', 'Node.js'],
 		year: '2015'
+	}, {
+		name: 'Portable Send Money',
+		description: 'I am leading an initiative to convert the send money pages into consumable react components',
+		image: '',
+		link: 'https://www.paypal.com/myaccount/transfer/',
+		company: 'PayPal',
+		technology: ['JavaScript', 'Node.js'],
+		year: '2016'
 	}
 ];

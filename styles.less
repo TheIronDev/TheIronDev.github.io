@@ -91,12 +91,25 @@ h2, h3 {margin: 0;}
   margin-bottom: 0.5em;
 }
 
+.portfolio_items {
+  width: 100%;
+}
+.portfolio_items_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
 .portfolio_item {
-  cursor: pointer;
-  height: 4em;
-  width: 49%;
 
-  margin: 1% 0.5%;
+  height: 4em;
+  width: 4em;
+
+  display: inline-block;
+  border-radius: 50%;
+
+  margin: 1% 1em;
 
   background: #fff;
   color: #333;
@@ -107,51 +120,145 @@ h2, h3 {margin: 0;}
   position: relative;
 
   @media (max-width: 800px) {
-   width: 100%;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    background-position: top right;
+    overflow: hidden;
+
+    .portfolio_item_more_details {
+      height: auto;
+      width: 100%;
+      position: initial;
+      background: none;
+      border-radius: 0;
+      border: 0;
+    }
+
+    &:hover .portfolio_item_more_details {
+      height: auto;
+      width: auto;
+
+    }
   }
 
 //  Loop through the companies in my profile to tack on a little icon on the top right corner
   .for(@companies); .-each(@company) {
     &.company-@{company} {
-      background: url('./images/icons/@{company}.png') no-repeat top right #fff;
+      background: url('./images/icons/@{company}.png') no-repeat center center #fff;
       background-size: 1.8em;
-
-      .portfolio_item_title {
-        padding: 0.5em 2em;
-      }
     }
   }
 }
-.portfolio_item_title {
-  padding: 0.5em;
-  height: 4em;
+
+.portfolio_item_background {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  top: 0;
+  opacity: 0.5;
 }
-.portfolio_item_description {
-  background: #333;
-  color: #fff;
+
+.portfolio_item_more_details {
   height: 0;
+  width: 0;
   padding: 0 0.5em;
+
+  background: #fff;
+  background-size: cover;
+  box-shadow: 0 0 1em #333;
+  color: #fff;
 
   overflow: hidden;
 
-  border-radius: 0 0 1em 1em;
+  border-radius: 50%;
+  font-size: 0.5em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  z-index: 0;
 
   transition: all .5s ease;
-  position: absolute;
-  z-index: 1;
+
+}
+.portfolio_item_title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+  vertical-align: middle;
+}
+.portfolio_item_description {
+  font-size: 0.7rem;
 }
 
+.portfolio_item_more_details_content {
+  background: rgba(255,255,255, 0.5);
+  color: #000;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+.portfolio_item_link {
+  display: block;
+  padding: 1em;
+}
 .portfolio_item_image {
   max-width: 100%;
   padding: 0 0.5em 0.5em;
   display: block;
 }
 
-.portfolio_item:hover,
-.portfolio_item:focus {
-  .portfolio_item_description {
+.portfolio_item:hover {
+  .portfolio_item_more_details {
+    height: 15rem;
+    width: 15rem;
+    bottom: -10rem;
+    right: -10rem;
+    z-index: 1;
+  }
+
+  &.bottomScaled .portfolio_item_more_details {
+    bottom: 0rem;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .portfolio_item.portfolio_item {
+    width: 100%;
     height: auto;
-    padding: 0.5em;
+    margin: 0;
+    border-radius: 0;
+    background-position: top right;
+    overflow: hidden;
+
+    &:hover .portfolio_item_more_details {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  .portfolio_item_more_details_content {
+    background: none;
+  }
+
+  .portfolio_item_more_details {
+    height: auto;
+    width: 100%;
+    position: initial;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    border: 0;
+  }
+  .portfolio_item_background {
+    display: none;
   }
 
 }

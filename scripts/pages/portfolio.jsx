@@ -1,56 +1,61 @@
 
 import React from 'react';
 
-export default class Home extends React.Component {
+let PortfolioItem = ({ portfolioItem }) => {
 
-	renderPortfolioItemsByYear() {
+	let company = (portfolioItem.company || '').toLowerCase(),
+		portfolioImage = portfolioItem.image ? portfolioItem.image : '',
+		companyClass = company ? 'company-' + company : '',
+		itemClassName = `portfolio_item ${companyClass} ${portfolioItem.customClass || ''}`;
 
-		let yearObj = this.props.portfolioItems.reduce((memo, portfolioItem) => {
-			memo[portfolioItem.year] = memo[portfolioItem.year] ? memo[portfolioItem.year].concat(portfolioItem) : [portfolioItem];
-			return memo;
-		}, {});
+	return (<li className={itemClassName}>
 
-		let years = Object.keys(yearObj).sort().reverse();
+		<div className="portfolio_item_more_details" >
+			<img className="portfolio_item_background" src={portfolioImage} />
+			<div className="portfolio_item_more_details_content">
+				<div className="portfolio_item_title">{portfolioItem.name}</div>
+				<span className="portfolio_item_description">{portfolioItem.description}</span>
+				<a href={portfolioItem.link} className="portfolio_item_link">Link</a>
+			</div>
+		</div>
+	</li>);
+};
 
-		return years.map((year) => {
+let PortfolioItems = ( { portfolioItems }) => {
 
-			let items = (yearObj[year]).map((portfolioItem, index) => {
+	// Reshape the portfolio, putting portfolioItems into an array based on their year
+	let yearObj = portfolioItems.reduce((memo, portfolioItem) => {
+		memo[portfolioItem.year] = memo[portfolioItem.year] ? memo[portfolioItem.year].concat(portfolioItem) : [portfolioItem];
+		return memo;
+	}, {});
 
-				let company = (portfolioItem.company || '').toLowerCase(),
-					portfolioImage = portfolioItem.image ? (<img className="portfolio_item_image" src={portfolioItem.image} />) : '',
-					itemPositionClassMap = {
-						0: 'left',
-						1: 'center',
-						2: 'right'
-					},
-					itemPositionClass = itemPositionClassMap[index%3],
-					companyClass = company ? 'company-' + company : '',
-					itemClassName = `portfolio_item ${companyClass}`,
-					descriptionClassName = `portfolio_item_description ${itemPositionClass}`;
+	// Convert the years to a set of arrays
+	let years = Object.keys(yearObj).sort().reverse();
 
-				return (<li className={itemClassName} tabIndex="0">
-					<div className="portfolio_item_title">{portfolioItem.name}</div>
-					<div className={descriptionClassName}>
-						{portfolioImage}
-						{portfolioItem.description}
-					</div>
-				</li>);
-			});
+	// Loop through each year
+	let liItems = years.map((year) => {
 
-			return [<li className="portfolio_year">{year}</li>].concat(items);
-		});
+		// Map each portfolioItem's data into an array of lis
+		let portfolioItems = (yearObj[year]).map((portfolioItem) => (<PortfolioItem portfolioItem={portfolioItem} />));
 
+		let portfolioItemsList = (
+			<li className="portfolio_items"><ul className="portfolio_items_list">{portfolioItems}</ul></li>
+		);
 
-	}
+		return [<li className="portfolio_year">{year}</li>].concat(portfolioItemsList);
+	});
+
+	return (<ul className='portfolio_itemWrapper'>
+		{liItems}
+	</ul>)
+};
+
+export default class Portfolio extends React.Component {
 
 	render() {
-
-		let portfolioItems = this.renderPortfolioItemsByYear();
 		return <div className="portfolio_wrapper">
 			<h2>Portfolio</h2>
-			<ul className='portfolio_itemWrapper'>
-				{portfolioItems}
-			</ul>
+			<PortfolioItems portfolioItems={this.props.portfolioItems} />
 		</div>;
 	}
 }

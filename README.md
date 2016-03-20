@@ -5,7 +5,7 @@
 
 ```
 npm install
-webpack --watch
+npm run dev
 ```
 
 ## Flux Setup

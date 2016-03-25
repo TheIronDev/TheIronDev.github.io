@@ -39,3 +39,7 @@ The general workflow is a little confusing at first, but let me see if I can sum
 
 Incredibly Useful Resource: [Flux For Stupid People](http://blog.andrewray.me/flux-for-stupid-people/)
 
+**Copyright Stuff**:
+
+I shamelessly grabbed a sprite of link from "Link to the Past", but let the record be known that I have absolutely
+no ownership of using the image, and will remove the image upon request by Nintendo.

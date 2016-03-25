@@ -15,7 +15,9 @@ let PortfolioItem = ({ portfolioItem }) => {
 			<div className="portfolio_item_more_details_content">
 				<div className="portfolio_item_title">{portfolioItem.name}</div>
 				<span className="portfolio_item_description">{portfolioItem.description}</span>
-				<a href={portfolioItem.link} className="portfolio_item_link">Link</a>
+				<a href={portfolioItem.link} className="portfolio_item_link">
+					Link to portfolio item
+				</a>
 			</div>
 		</div>
 	</li>);

@@ -131,6 +131,14 @@ module.exports = [
 		technology: ['JavaScript', 'Ember'],
 		year: '2015'
 	}, {
+		name: 'Websockets of Life',
+		description: 'A game of life server side demo, powered by jenova and websockets.',
+		image: '',
+		link: 'http://websocket-of-life.herokuapp.com/',
+		company: 'Personal',
+		technology: ['JavaScript', 'Node.js'],
+		year: '2015'
+	}, {
 		name: 'Jenova: Game of Life Module',
 		description: 'A game of life module that is intended to work both in a server side and client side environment.',
 		image: '',
@@ -148,7 +156,7 @@ module.exports = [
 		year: '2015'
 	}, {
 		name: 'Portable Send Money',
-		description: 'I am leading an initiative to convert the send money pages into consumable react components',
+		description: 'I am leading an initiative to convert the send money pages into shareable react components',
 		image: '',
 		link: 'https://www.paypal.com/myaccount/transfer/',
 		company: 'PayPal',

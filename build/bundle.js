@@ -20692,6 +20692,14 @@
 			company: 'PayPal',
 			technology: ['JavaScript', 'Node.js'],
 			year: '2016'
+		}, {
+			name: 'DOM-To-Canvas',
+			description: 'A vanilla js side project that parses a dom and renders it into a graph',
+			image: '',
+			link: 'http://dom-to-canvas.herokuapp.com/',
+			company: 'Personal',
+			technology: ['JavaScript'],
+			year: '2016'
 		}
 	];
 

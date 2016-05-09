@@ -165,7 +165,7 @@ module.exports = [
 	}, {
 		name: 'DOM-To-Canvas',
 		description: 'A vanilla js side project that parses a dom and renders it into a graph',
-		image: '',
+		image: './images/portfolio/domToCanvas.jpg',
 		link: 'http://dom-to-canvas.herokuapp.com/',
 		company: 'Personal',
 		technology: ['JavaScript'],

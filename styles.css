@@ -3,7 +3,8 @@
 body,
 html {height:100%;margin: 0}
 html {
-  background: url('./images/background.jpg') no-repeat #d4d7a3;
+  background: url('./images/background.jpg') no-repeat #666;
+  background-attachment: fixed;
   background-size: cover;
   min-height: 100%;
 
@@ -20,19 +21,10 @@ h1, h2, h3 {text-align: center;}
 h1 {color: #fff}
 h2, h3 {margin: 0 0 1rem;}
 
-.navigation {position: absolute;width: 100%;}
-.navigation_list {margin: 0 auto; padding:0;text-align: center}
-.navigation_item {list-style: none; margin: 3em 3em 0;cursor: pointer; display: inline-block}
-.navigation_item.active {text-decoration: underline;}
-
-.container_wrapper {display: flex;height: 100%;min-height: 400px}
-
-.container {
-  transition: all .5s ease;
-}
 .aboutMe {
-  padding-top: 10rem;
+  padding-top: 15rem;
   text-align: center;
+  transition: all 1s ease;
 }
 .aboutMeContent {}
 .profilePhoto {
@@ -42,19 +34,20 @@ h2, h3 {margin: 0 0 1rem;}
   background-size: cover;
   border: 1px solid white;
   border-radius: 50%;
-  float: left;
-  margin-left: 1rem;
-  margin-top: -5rem;
+  margin: -5rem auto;
+  position: relative;
+  left: -16rem;
+  transition: all .5s ease;
 }
 .portfolio {
   background: #fff;
   color: #666;
 }
 .portfolioHeader {
-  padding: 2rem 11rem 2rem 0;
+  padding: 5rem 0;
 }
 .portfolioNav {
-  margin: 0 0 0 10rem;
+  margin: 0;
   padding: 0;
   text-align: center;
 }
@@ -79,15 +72,18 @@ h2, h3 {margin: 0 0 1rem;}
   font-size: 1.5rem;
 }
 .portfolio-section-hero {
-  background-color: #fff;
-  background-position: center center;
-  background-size: 90% 90%;
-  background-repeat: no-repeat;
+  background: #fff;
+  box-shadow: 0px 1px 3px #333;
   display: block;
   float: right;
+  margin-top: -3rem;
   margin-left: 1rem;
-  height: 200px;
-  width: 300px;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.portfolio-section-heroImg {
+  max-width: 100%;
 }
 
 .portfolio-iconAnchor {
@@ -105,4 +101,28 @@ h2, h3 {margin: 0 0 1rem;}
 }
 .portfolio-icon {
   height: 50px;
+}
+
+@media (max-width: 700px) {
+  .profilePhoto {
+    left: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .portfolio-section {
+    padding: 1rem;
+  }
+  .portfolio-sectionIcon {
+    left: inherit;
+    right: 0.5rem;
+    top: 0.5rem;
+  }
+  .portfolio-section-hero {
+    float: none;
+    margin: 1rem 0;
+    max-height: 200px;
+    max-width: 100%;
+  }
 }

@@ -4,6 +4,7 @@
   "description": "Personal Homepage",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint scripts/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/TheIronDeveloper/TheIronDeveloper.github.io/issues"
   },
-  "homepage": "https://github.com/TheIronDeveloper/TheIronDeveloper.github.io"
+  "homepage": "https://github.com/TheIronDeveloper/TheIronDeveloper.github.io",
+  "devDependencies": {
+    "eslint": "^3.0.0",
+    "eslint-config-google": "^0.6.0"
+  }
 }

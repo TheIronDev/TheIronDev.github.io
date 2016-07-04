@@ -5,14 +5,7 @@ function scrollTopToView() {
     let aboutMeHeight = aboutMe.clientHeight;
     let headerHeight = document.getElementById('portfolioHeader').clientHeight;
     let paddingTop = window.outerHeight - aboutMeHeight - headerHeight + 150;
-    let cssText = '';
-
-    // If we scroll passed the initial page and refresh, skip the css transition
-    console.log(window.scrollY, window.innerHeight);
-    if (window.scrollY > window.innerHeight) {
-        cssText = 'transition: none;';
-    }
-    cssText += `padding-top: ${paddingTop}px`;
+    let cssText = `padding-top: ${paddingTop}px`;
     aboutMe.style.cssText = cssText;
 }
 
@@ -94,9 +87,7 @@ function scrollTopToView() {
             document.getElementById('portfolioNav').appendChild(portfolioNavItems);
             document.getElementById('portfolio').appendChild(portfolioToRender);
         })
-        .then(() => {
-            setTimeout(scrollTopToView, 60);
-        });
+        .then(scrollTopToView);
 })();
 
 let debouncer;

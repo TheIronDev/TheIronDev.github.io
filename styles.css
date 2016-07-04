@@ -1,0 +1,108 @@
+
+* {;box-sizing: border-box;-moz-box-sizing: border-box}
+body,
+html {height:100%;margin: 0}
+html {
+  background: url('./images/background.jpg') no-repeat #d4d7a3;
+  background-size: cover;
+  min-height: 100%;
+
+  color: #efefef;
+}
+body {
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+  line-height: 1.5rem;
+}
+body.fontLoaded {
+  font-family: "Titillium Web", "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+}
+h1, h2, h3 {text-align: center;}
+h1 {color: #fff}
+h2, h3 {margin: 0 0 1rem;}
+
+.navigation {position: absolute;width: 100%;}
+.navigation_list {margin: 0 auto; padding:0;text-align: center}
+.navigation_item {list-style: none; margin: 3em 3em 0;cursor: pointer; display: inline-block}
+.navigation_item.active {text-decoration: underline;}
+
+.container_wrapper {display: flex;height: 100%;min-height: 400px}
+
+.container {
+  transition: all .5s ease;
+}
+.aboutMe {
+  padding-top: 10rem;
+  text-align: center;
+}
+.aboutMeContent {}
+.profilePhoto {
+  width: 10rem;
+  height: 10rem;
+  background: url('images/tystark.jpg');
+  background-size: cover;
+  border: 1px solid white;
+  border-radius: 50%;
+  float: left;
+  margin-left: 1rem;
+  margin-top: -5rem;
+}
+.portfolio {
+  background: #fff;
+  color: #666;
+}
+.portfolioHeader {
+  padding: 2rem 11rem 2rem 0;
+}
+.portfolioNav {
+  margin: 0 0 0 10rem;
+  padding: 0;
+  text-align: center;
+}
+.portfolio-section {
+  color: #fff;
+  min-height: 10em;
+  overflow: hidden;
+  padding: 3rem;
+  position: relative;
+}
+.portfolio-sectionIcon {
+  background: #fff;
+  display: inline-flex;
+  height: 25px;
+  padding: 0.1rem;
+
+  position: absolute;
+  left: 0.75rem;
+  top: 3.2rem;
+}
+.portfolio-sectionHeader {
+  font-size: 1.5rem;
+}
+.portfolio-section-hero {
+  background-color: #fff;
+  background-position: center center;
+  background-size: 90% 90%;
+  background-repeat: no-repeat;
+  display: block;
+  float: right;
+  margin-left: 1rem;
+  height: 200px;
+  width: 300px;
+}
+
+.portfolio-iconAnchor {
+  margin: 0.5rem;
+  border: 1px solid #efefef;
+  display: inline-flex;
+  padding: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 0px #ccc;
+  transition: all .5s ease;
+}
+.portfolio-iconAnchor:focus,
+.portfolio-iconAnchor:hover {
+  box-shadow: 5px 5px 5px #ccc;
+}
+.portfolio-icon {
+  height: 50px;
+}

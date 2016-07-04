@@ -80,6 +80,7 @@ h2, h3 {margin: 0 0 1rem;}
   margin-left: 1rem;
   max-width: 300px;
   overflow: hidden;
+  transition: all .5s ease;
 }
 
 .portfolio-section-heroImg {
@@ -101,6 +102,12 @@ h2, h3 {margin: 0 0 1rem;}
 }
 .portfolio-icon {
   height: 50px;
+}
+
+.gameOfLife {
+  position: fixed;
+  min-width: 100%;
+  z-index: -1;
 }
 
 @media (max-width: 700px) {

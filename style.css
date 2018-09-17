@@ -1,11 +1,35 @@
 * {box-sizing: border-box}
 html, body {height: 100%; margin: 0; overflow: hidden; padding: 0}
-body {display: flex; font-size: 10px; flex-direction: column; justify-content: flex-end; padding: 1rem}
-main {align-items: baseline; display: flex; flex-direction: row;}
+body {display: flex; font-size: 10px; flex-direction: column; justify-content: center; align-items: center}
+main {align-items: center; background: #00796b; border-radius: 50%; color: #fff;display: flex; height: 8rem; width: 8rem; padding: 1rem; position: relative; text-align: center;}
+main:before,
+main:after {
+  border-radius: 50%;
+  content: ' ';
+  display: block;
+  height: 8rem;
+  left: 0;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  width: 8rem;
+}
+
+main:before {
+  background: #fff;
+  transform: scale(1.05);
+  z-index: -1;
+}
+main:after {
+  background: #00796b;
+  transform: scale(1.1);
+  z-index: -2;
+}
+
 h1 {font: 2rem 'Raleway', sans-serif; margin: 0}
 .work img {width: 1rem}
 .inactive {opacity: .5}
 
 @media (max-width: 30rem) {
-  main {flex-direction: column}
+  main {}
 }
